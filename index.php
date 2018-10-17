@@ -1,5 +1,6 @@
 <?php
-	include_once 'stuff.php';
+	include_once 'db_crea_conn.class.php';
+	include_once 'usr_tb_crea.class.php'
 ?>
 
 <!DOCTYPE html>
@@ -10,7 +11,10 @@
 	</head>
 	<body>
 		<?php
-			$dbase = new Dbase;
+			$dbase = new Create;
+			$pdo = new Connect;
+			$pdo_conn = $pdo->connect();
+			Usr_table::createTb($pdo_conn);
 		?>
 	</body>
 </html>
