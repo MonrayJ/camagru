@@ -10,7 +10,7 @@
 				`password` VARCHAR(200) NOT NULL,
 				`email` VARCHAR(100) NOT NULL,
 				`name` VARCHAR(100) NOT NULL,
-				`lastname` VARCHAR(100) NOT NULL
+				`profile_pic` VARCHAR(200) NOT NULL
 			)";
 			$pdo_conn->exec($sql);
 			echo "User table created successfully";

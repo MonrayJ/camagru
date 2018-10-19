@@ -1,14 +1,20 @@
 <?php
 	class Create
 	{
-		protected $servername = "localhost";
-		protected $username = "mjacobs";
-		protected $password = "960206";
-		protected $dbname = "testdb";
-		protected $charset = "utf8mb4";
+		protected $servername;
+		protected $username;
+		protected $password;
+		protected $dbname;
+		protected $charset;
 
 		public function __construct()
 		{
+			$this->servername = "localhost";
+			$this->username = "mjacobs";
+			$this->password = "960206";
+			$this->dbname = "testdb";
+			$this->charset = "utf8mb4";
+	
 			try
 			{
 				$conn = new PDO("mysql:host=".$this->servername, $this->username, $this->password);
@@ -29,19 +35,29 @@
 
 	class Connect extends Create
 	{
+
 		public function __construct()
 		{
+		}
+
+		public function connect()
+		{
+			$this->servername = "localhost";
+			$this->username = "mjacobs";
+			$this->password = "960206";
+			$this->dbname = "testdb";
+			$this->charset = "utf8mb4";
 			try
 			{
-				$dsn = "mysql:host=".$this->servername.";dbname=".$this->dbname.";charse=".$this->charset;
+				$dsn = "mysql:host=".$this->servername.";dbname=".$this->dbname;
 				$pdo_conn = new PDO($dsn, $this->username, $this->password);
-				$pdo_conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXEPTION);
+				$pdo_conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 				echo "Connection made";
 				return $pdo_conn;
 			}
 			catch(PDOExeption $e)
 			{
-				echo $sql . "<br>" . $e->getMessage();
+				echo "Connection failed: " . "<br>" . $e->getMessage();
 			}
 		}
 	}

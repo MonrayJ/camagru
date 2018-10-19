@@ -11,7 +11,7 @@
 	</head>
 	<body>
 		<?php
-			$dbase = new Create;
+			//$dbase = new Create;
 			$pdo = new Connect;
 			$pdo_conn = $pdo->connect();
 			Usr_table::createTb($pdo_conn);
