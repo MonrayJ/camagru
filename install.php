@@ -1,6 +1,6 @@
 <?php
 	include_once 'create.class.php';
-	include_once 'usr_tb_crea.class.php'
+	include_once 'user/config.php';
 ?>
 
 <!DOCTYPE html>
@@ -12,9 +12,10 @@
 	<body>
 		<?php
 			//$dbase = new Create;
-			$pdo = new Connect;
-			$pdo_conn = $pdo->connect();
-			Usr_table::createTb($pdo_conn);
+//			$pdo = new Create;
+			$pdo_conn = get_connect();
+			$tb = new Usr_table;
+			$tb->create_tb($pdo_conn);
 		?>
 	</body>
 </html>

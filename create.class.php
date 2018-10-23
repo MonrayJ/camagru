@@ -10,7 +10,7 @@
 		public function __construct()
 		{
 			$this->servername = "localhost";
-			$this->username = "mjacobs";
+			$this->username = "root";
 			$this->password = "960206";
 			$this->dbname = "testdb";
 			$this->charset = "utf8mb4";
@@ -35,7 +35,7 @@
 
 	class Usr_table
 	{
-		static function createTb($pdo_conn)
+		static function create_tb($pdo_conn)
 		{
 			try
 			{
@@ -45,7 +45,7 @@
 					`password` VARCHAR(200) NOT NULL,
 					`email` VARCHAR(100) NOT NULL,
 					`name` VARCHAR(100) NOT NULL,
-					`profile_pic` VARCHAR(200) NOT NULL
+					`profile_pic` VARCHAR(200) NULL
 				)";
 				$pdo_conn->exec($sql);
 				echo "User table created successfully";
