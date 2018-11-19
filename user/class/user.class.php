@@ -16,7 +16,7 @@ Class User_class
 		$data = $stmt->fetch(PDO::FETCH_OBJ);
 		$db_conn = null;
 		if ($count)
-		{
+		{	
 			$_SESSION['uid'] = $data->uid;
 			return true;
 		}
@@ -71,7 +71,6 @@ Class User_class
 	/* User Details */
 	public function user_details($uid)
 	{
-		echo "function called";
 		try 
 		{
 			$db_conn = get_connect();

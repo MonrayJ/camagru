@@ -14,6 +14,7 @@ var registerBtn = document.getElementById('registerBtn');
 loginBtn.addEventListener('click', openModal);
 closeBtn.addEventListener('click', closeModal);
 window.addEventListener('click', outsideClick);
+window.addEventListener('click', outsideClick2);
 // Register
 registerBtn.addEventListener('click', openRegModal);
 close2.addEventListener('click', closeRegModal);
@@ -22,6 +23,7 @@ close2.addEventListener('click', closeRegModal);
 function openModal()
 {
     loginModal.style.display = 'block';
+    registerBtn.disabled = true;
 }
 // Function to open registerModal
 function openRegModal()
@@ -32,6 +34,7 @@ function openRegModal()
 function closeModal()
 {
     loginModal.style.display = 'none';
+    registerBtn.disabled = false;
 }
 // Function to close registerModal
 function closeRegModal()
@@ -42,9 +45,17 @@ function closeRegModal()
 // Function to close loginModal without closeBtn
 function outsideClick(e)
 {
-    if (e.target == loginModal || e.target == registerModal)
+    if (e.target == registerModal)
+    {
+        registerModal.style.display = 'none';
+    }
+}
+
+function outsideClick2(e)
+{
+    if (e.target == loginModal)
     {
         loginModal.style.display = 'none';
-        registerModal.style.display = 'none';
+        registerBtn.disabled = false;
     }
 }

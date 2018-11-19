@@ -58,4 +58,27 @@
 		}
 	}
 
+	class Gallery_table
+	{
+		static function create_gallery($pdo_conn)
+		{
+			try
+			{
+				$sql = "CREATE TABLE `gallery` (
+					`imgid` int NOT NULL PRIMARY KEY AUTO_INCREMENT,
+					`uid` int REFERENCES users(uid),
+					`img_path` VARCHAR(200) NOT NULL,
+					`description` VARCHAR(200) NULL
+				)";
+				$pdo_conn->exec($sql);
+				echo "here";
+				echo "gallery table created successfully";
+			}
+			catch(PDOExeption $e)
+			{
+				echo "Failed to create TB: " . "<br>" . $e->getMessage();
+			}
+			$pdo_conn = null;
+		}
+	}
 ?>
