@@ -10,8 +10,8 @@
 		public function __construct()
 		{
 			$this->servername = "localhost";
-			$this->username = "root";
-			$this->password = "960206";
+			$this->username = "mjacobs";
+			$this->password = "960206@Mj";
 			$this->dbname = "testdb";
 			$this->charset = "utf8mb4";
 	
@@ -48,7 +48,7 @@
 					`profile_pic` VARCHAR(200) NULL
 				)";
 				$pdo_conn->exec($sql);
-				echo "User table created successfully";
+				echo "User table created successfully<br>";
 			}
 			catch(PDOExeption $e)
 			{
@@ -66,13 +66,60 @@
 			{
 				$sql = "CREATE TABLE `gallery` (
 					`imgid` int NOT NULL PRIMARY KEY AUTO_INCREMENT,
-					`uid` int REFERENCES users(uid),
+					`uid` int NOT NULL REFERENCES users(uid),
+					`username` VARCHAR(25) NOT NULL REFERENCES users(username),
 					`img_path` VARCHAR(200) NOT NULL,
-					`description` VARCHAR(200) NULL
+					`description` VARCHAR(5000) NOT NULL
 				)";
 				$pdo_conn->exec($sql);
-				echo "here";
-				echo "gallery table created successfully";
+				echo "gallery table created successfully<br>";
+			}
+			catch(PDOExeption $e)
+			{
+				echo "Failed to create TB: " . "<br>" . $e->getMessage();
+			}
+			$pdo_conn = null;
+		}
+	}
+
+	class Likes_table
+	{
+		static function public_likes($pdo_conn) // likes on the home page
+		{
+			try
+			{
+				$sql = "CREATE TABLE `likes` (
+					`imgid` int NOT NULL,
+					`owner_id` int NOT NULL REFERENCES users(uid),
+					`liker_id` int NOT NULL REFERENCES users(uid),
+					FOREIGN KEY(`imgid`) REFERENCES `testdb`.`gallery`(`imgid`) ON DELETE CASCADE
+				)";
+				$pdo_conn->exec($sql);
+				echo "likes table created successfully<br>";
+			}
+			catch(PDOExeption $e)
+			{
+				echo "Failed to create TB: " . "<br>" . $e->getMessage();
+			}
+			$pdo_conn = null;
+		}
+	}
+
+	class Comments_table
+	{
+		static function public_comments($pdo_conn) // comments on the home page
+		{
+			try
+			{
+				$sql = "CREATE TABLE `comments` (
+					`imgid` int NOT NULL,
+					`owner_id` int NOT NULL REFERENCES users(uid),
+					`commenter_id` int NOT NULL REFERENCES users(uid),
+					`comment` VARCHAR(5000) NOT NULL,
+					FOREIGN KEY(`imgid`) REFERENCES `testdb`.`gallery`(`imgid`) ON DELETE CASCADE
+				)";
+				$pdo_conn->exec($sql);
+				echo "Comments table created successfully<br>";
 			}
 			catch(PDOExeption $e)
 			{

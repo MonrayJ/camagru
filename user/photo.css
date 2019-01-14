@@ -1,99 +1,199 @@
-html
+body
 {
-	background-color: #0d0e12 !important;
-}
-.booth
-{
-	width: 44%;
-	background-color: #1b1f26;
-	border: 10px solid #1b1f26;
-	margin: 0 1%;
-	height: auto;
-	float: left;
-}
-.upload form input
-{
-	color: white;
-	width: 100%;
-}
-#photo
-{
-	width: 100%
-}
-.booth-capture-button
-{
-	display: block;
-	margin: 2px 0px 10px 0px;
-	padding: 10px 20px;
-	background-color: #4CAF50;
-	color: white;
-	text-decoration: none;
-	text-align: center;
+	margin: 0;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 15px;
+	line-height: 1.6;
 }
 #canvas
 {
 	display: none;
 }
-#serverResponse
-{
-	display: none
-}
-#save
-{
-	margin: 2px 0px 0px 0px;
-}
-#button
-{
-	margin: 0px 0px 10px 0px;
-}
-
-/******** Upload ********/
-#upload
-{
-	width: 44%;
-	background-color: #1b1f26;
-	border: 10px solid #1b1f26;
-	margin: 0 1%;
-	height: auto;
-	float: right;
-}
 #methods
 {
-	display: inline-block;
-	width: 100%;
+	margin: 20px auto;
 	position: relative;
-	margin: auto;
-	z-index: 1;
+	/* background-color: #6d3838; */
+	max-width: 950px;
+}
+@media screen and (max-width: 606px)
+{
+	#methods
+	{
+		margin: 20px 0px 20px 5px;
+	}
+}
+.booth
+{
+	width: 48%;
+	/* background-color: rgb(89, 107, 160); */
+	float: left;
+}
+#upload
+{
+	width: 48%;
+	/* background-color: royalblue; */
+	float: right;
+	height: auto;
+}
+.booth-capture-button
+{
+	display: block;
+	margin: 2px 0px 7px 0px;
+	padding: 10px 20px;
+	background-color: #4CAF50;
+	color: white;
+	text-decoration: none;
+	text-align: center;
+	border-radius: 15px;
+	border-right: 1px solid black;
+	border-bottom: 1px solid black;
 }
 @media screen and (max-width: 606px)
 {
 	#upload
 	{
-		width: 94.4%;
-		background-color: #1b1f26;
-		border: 10px solid #1b1f26;
-		margin: 0 1%;
-		height: auto;
 		float: left;
+		width: 99%;
 	}
 	.booth
 	{
-		width: 94.4%;
-		background-color: #1b1f26;
-		border: 10px solid #1b1f26;
-		margin: 0 1%;
-		height: auto;
-		float: left;
+		width: 99%;
 	}
 }
-form label, form input
+img
 {
-	display: block;
-	width: 90%;
-	background-color: #0d0e12;
-	color: #fbf6ec;
+	border-radius: 15px;
+	border-right: 1px solid black;
+	border-bottom: 1px solid black;
+	width: 100%;
 }
-.content h2
+#video
 {
+	border-radius: 15px;
+	border-right: 1px solid black;
+	border-bottom: 1px solid black;
+}
+
+
+
+
+
+
+
+
+
+
+
+form input
+{
+	box-sizing: border-box;
+	width: 100%;
+	border-radius: 15px;
+	padding: 5px;
+	border: 1px solid #50ad55;
+	margin: 5px 0px;
+	/* background-color: white; */
+}
+label
+{
+	box-sizing: border-box;
+	width: 100%;
+}
+#file
+{
+	display: none;
+}
+
+.inputfile-6 + label {
+    color: #50ad55;
+}
+
+.inputfile-6 + label {
+	border: 1px solid #50ad55;
+	border-right: 1px solid black;
+	border-bottom: 1px solid black;
+	border-radius: 15px;
+    background-color: #f1e5e6;
+    padding: 0;
+}
+
+.inputfile-6:focus + label,
+.inputfile-6 + label:hover {
+	border-color: black;
+	color: black;
+}
+
+.inputfile-6 + label span,
+.inputfile-6 + label strong {
+    padding: 10px 20px;
+}
+
+.inputfile-6 + label span {
+    width: 40%;
+    min-height: 24px;
+    display: inline-block;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    vertical-align: top;
+}
+
+.inputfile-6 + label strong {
+	height: 100%;
+	width: 100%;
+    color: #f1e5e6;
+    background-color: #50ad55;
+    display: inline-block;
+}
+
+.inputfile-6:focus + label strong,
+.inputfile-6 + label:hover strong {
+	background-color: #949393;
+	color: black;
+	border-left: 1px black;
+}
+
+/* @media screen and (max-width: 606px) {
+	.inputfile-6 + label strong {
+		display: block;
+	}
+} */
+.inputfile + label {
+    max-width: 100%;
+    font-size: 15px;
+    font-weight: 700;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    cursor: pointer;
+    display: inline-block;
+    overflow: hidden;
+}
+.inputfile:focus + label{
+    outline: 1px dotted #000;
+    outline: -webkit-focus-ring-color auto 5px;
+}
+.gallery-input
+{
+	margin: 0px;
+	width: 75%;
+	display: inline-block;
+	text-decoration: none;
+	border-radius: 15px;
+}
+.gallery-submit
+{
+	padding: 5px 5px;
+	box-sizing: border-box;
+	border: 1px solid #50ad55;
+	width: 25%;
+	float: right;
+	display: block;
+	background-color: #4CAF50;
 	color: white;
+	text-decoration: none;
+	text-align: center;
+	border-radius: 15px;
+	border-right: 1px solid black;
+	border-bottom: 1px solid black;
 }

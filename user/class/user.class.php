@@ -1,6 +1,6 @@
 <?php
 
-Class User_class
+class User_class
 {
 	/* User Login */
 	public function user_login($usernameEmail,$password)
@@ -62,7 +62,7 @@ Class User_class
 				return false;
 			}
 		}
-		catch(PDOExeption $e)
+		catch(PDOException $e)
 		{
 			echo "Registration failed: ". $e->getMessage() . "<br>";
 		}
@@ -80,7 +80,7 @@ Class User_class
 			$data = $stmt->fetch(PDO::FETCH_OBJ);
 			return $data;
 		}
-		catch(PDOExeption $e)
+		catch(PDOException $e)
 		{
 			echo "Error fetching". $e->getMessage() . "<br>";
 		}

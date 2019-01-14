@@ -10,7 +10,7 @@ if (!empty($_POST['loginSubmit']))
 $usernameEmail=$_POST['usernameEmail'];
 $password=$_POST['password'];
 if(/*strlen(trim($usernameEmail))>1 && strlen(trim($password))>1 */ $password && $usernameEmail)
-   {
+	 {
 		// echo "<script> alert ('got here1');</script>";
 		$uid=$userClass->user_login($usernameEmail,$password);
 		if($uid)
@@ -37,9 +37,7 @@ if (!empty($_POST['signupSubmit']))
 	$password_check = preg_match('~^[A-Za-z0-9!@#$%^&*()_]{6,20}$~i', $password);
 	if($username_check && $email_check && $password_check && strlen(trim($name))>0) 
 	{
-		echo "<script> alert ('got here1');</script>";
 		$uid=$userClass->user_registration($username,$password,$email,$name);
-		echo "Second test to see where the problem is!";
 		if($uid)
 		{
 			$url=BASE_URL.'home.php';
@@ -68,8 +66,8 @@ if (!empty($_POST['signupSubmit']))
 			background-color: #222935;
 			position: fixed;
 			top: 0;
-	  width: 100%;
-	}
+			width: 100%;
+		}
 
 		.topnav a
 		{
@@ -84,11 +82,11 @@ if (!empty($_POST['signupSubmit']))
 
 	.topnav .but
 	{
-	  float: left;
-	  display: block;
-	  color: #f2f2f2;
-	  text-align: center;
-	  padding: 10px 16px;
+		float: left;
+		display: block;
+		color: #f2f2f2;
+		text-align: center;
+		padding: 10px 16px;
 	}
 		.topnav a:hover
 		{
@@ -98,7 +96,7 @@ if (!empty($_POST['signupSubmit']))
 
 		.topnav .but:hover
 		{
-	  background-color: #222935;
+		background-color: #222935;
 			color: black;
 		}
 
@@ -121,10 +119,10 @@ if (!empty($_POST['signupSubmit']))
 			}
 			.topnav a.icon
 			{
-  				float: right;
-  				display: block;
+					float: right;
+					display: block;
 			}
-  		}
+			}
 
 		@media screen and (max-width: 606px)
 		{
@@ -149,13 +147,13 @@ if (!empty($_POST['signupSubmit']))
 		}
 	.content
 	{
-	  padding-top: 60px;
+		padding-top: 60px;
 	}
 </style>
 </head>
 <body>
-  
-  <div class="topnav sticky" id="myTopnav">
+	
+	<div class="topnav sticky" id="myTopnav">
 	<a href="#home" class="active">Home</a>
 	<a href="#news">Gallery</a>
 	<a href="#contact">Profile</a>
@@ -164,32 +162,32 @@ if (!empty($_POST['signupSubmit']))
 	<a class="but"><button id="registerBtn" class="button">Register</button></a>
 	<!-- <div class="dropdown">
 	<button class="dropbtn">Dropdown 
-	  <i class="fa fa-caret-down"></i>
+		<i class="fa fa-caret-down"></i>
 	</button>
 	<div class="dropdown-content">
-	  <a href="#">Link 1</a>
-	  <a href="#">Link 2</a>
-	  <a href="#">Link 3</a>
+		<a href="#">Link 1</a>
+		<a href="#">Link 2</a>
+		<a href="#">Link 3</a>
 	</div>
-  </div>  -->
-  <a href="javascript:void(0);"  class="icon" onclick="myFunction()">&#9776;</a>
+	</div>  -->
+	<a href="javascript:void(0);"  class="icon" onclick="myFunction()">&#9776;</a>
 </div>
 
 <div class="content" style="padding-left:16px;padding-top:60px">
-  <h2>Responsive Topnav with Dropdown</h2>
-  <i class='fas fa-user-plus' style='font-size:24px'></i>
+	<h2>Responsive Topnav with Dropdown</h2>
+	<i class='fas fa-user-plus' style='font-size:24px'></i>
 
-  <p>Resize the browser window to see how it works.</p>
-  <p>Hover over the dropdown button to open the dropdown menu.</p>
+	<p>Resize the browser window to see how it works.</p>
+	<p>Hover over the dropdown button to open the dropdown menu.</p>
 </div>
 
 <div>
-  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Explicabo repellendus eveniet blanditiis doloremque ipsum sequi sapiente animi optio voluptatibus maiores ipsa perferendis, cumque temporibus vel. Maxime corrupti modi odit odio.</p>
-  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Explicabo repellendus eveniet blanditiis doloremque ipsum sequi sapiente animi optio voluptatibus maiores ipsa perferendis, cumque temporibus vel. Maxime corrupti modi odit odio.</p>
-  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Explicabo repellendus eveniet blanditiis doloremque ipsum sequi sapiente animi optio voluptatibus maiores ipsa perferendis, cumque temporibus vel. Maxime corrupti modi odit odio.</p>
-  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Explicabo repellendus eveniet blanditiis doloremque ipsum sequi sapiente animi optio voluptatibus maiores ipsa perferendis, cumque temporibus vel. Maxime corrupti modi odit odio.</p>
-  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Explicabo repellendus eveniet blanditiis doloremque ipsum sequi sapiente animi optio voluptatibus maiores ipsa perferendis, cumque temporibus vel. Maxime corrupti modi odit odio.</p>
-  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Explicabo repellendus eveniet blanditiis doloremque ipsum sequi sapiente animi optio voluptatibus maiores ipsa perferendis, cumque temporibus vel. Maxime corrupti modi odit odio.</p>
+	<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Explicabo repellendus eveniet blanditiis doloremque ipsum sequi sapiente animi optio voluptatibus maiores ipsa perferendis, cumque temporibus vel. Maxime corrupti modi odit odio.</p>
+	<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Explicabo repellendus eveniet blanditiis doloremque ipsum sequi sapiente animi optio voluptatibus maiores ipsa perferendis, cumque temporibus vel. Maxime corrupti modi odit odio.</p>
+	<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Explicabo repellendus eveniet blanditiis doloremque ipsum sequi sapiente animi optio voluptatibus maiores ipsa perferendis, cumque temporibus vel. Maxime corrupti modi odit odio.</p>
+	<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Explicabo repellendus eveniet blanditiis doloremque ipsum sequi sapiente animi optio voluptatibus maiores ipsa perferendis, cumque temporibus vel. Maxime corrupti modi odit odio.</p>
+	<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Explicabo repellendus eveniet blanditiis doloremque ipsum sequi sapiente animi optio voluptatibus maiores ipsa perferendis, cumque temporibus vel. Maxime corrupti modi odit odio.</p>
+	<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Explicabo repellendus eveniet blanditiis doloremque ipsum sequi sapiente animi optio voluptatibus maiores ipsa perferendis, cumque temporibus vel. Maxime corrupti modi odit odio.</p>
 </div>
 
 <script>
@@ -205,38 +203,38 @@ function myFunction() {
 
 
 <div id="loginModal" class="modal">
-  <div class="modal-content">
+	<div class="modal-content">
 	<div class="modal-header">
-	  <span class="closeBtn">&times;</span>
-	  <h2>Login</h2>
+		<span class="closeBtn">&times;</span>
+		<h2>Login</h2>
 	</div>
 	<form method="post" action="" name="login">
-	  <div class="modal-body">
+		<div class="modal-body">
 		<label>Username or Email</label>
 		<input type="text" name="usernameEmail" autocomplete="off">
 		<label>Password</label>
 		<input type="password" name="password" autocomplete="off">
 		<div class="errorMsg">
-		  <?php
+			<?php
 			echo $errorMsgLogin;
-		  ?>
+			?>
 		</div>
-	  </div>
-	  <div class="modal-footer">
+		</div>
+		<div class="modal-footer">
 		<h2>footer</h2>
 		<input type="submit" class="button" name="loginSubmit" value="Login">
-	  </div>
+		</div>
 	</form>
-  </div>
+	</div>
 </div>
 <div id="registerModal" class="modal">
-  <div class="modal-content">
+	<div class="modal-content">
 	<div class="modal-header">
-	  <span class="closeBtn">&times;</span>
-	  <h2>Register</h2>
+		<span class="closeBtn">&times;</span>
+		<h2>Register</h2>
 	</div>
 	<form method="post" action="" name="Register">
-	  <div class="modal-body">
+		<div class="modal-body">
 		<label>Name</label>
 		<input type="text" name="nameReg" autocomplete="off" />
 		<label>Email</label>
@@ -246,13 +244,13 @@ function myFunction() {
 		<label>Password</label>
 		<input type="password" name="passwordReg" autocomplete="off"/>
 		<div class="errorMsg"><?php// echo $errorMsgReg; ?></div>
-	  </div>
-	  <div class="modal-footer">
+		</div>
+		<div class="modal-footer">
 		<h2>footer</h2>
 		<input type="submit" class="button" name="signupSubmit" value="Signup">
-	  </div>
+		</div>
 	</form>
-  </div>
+	</div>
 </div>
 
 <script src="main.js"></script>

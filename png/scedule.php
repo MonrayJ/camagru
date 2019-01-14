@@ -1,0 +1,151 @@
+<?php
+
+SUNDAY()
+{
+	9	AM;		//	GYM
+	10	AM;		//	GYM
+	11	AM;		//	GYM
+	12	AM;		//	SHOWER EAT MEDITATE
+	1	PM;		//	SCHOOL
+	2	PM;		//	SCHOOL
+	3	PM;		//	SCHOOL
+	4	PM;		//	SCHOOL
+	5	PM;		//	EAT
+	6	PM;		//	GUITAR
+	7	PM;		//	GUITAR
+	8	PM;		//	GUITAR
+	9	PM;		//	SHOULD GET IN BED
+	10	PM;		//	SHOULD SERIOSLY GET IN BED
+}
+
+MONDAY()
+{
+	5	AM;		//	WAKE, RITALIN, DRESS
+	6	AM;		//	SCHOOL
+	7	AM;		//	SCHOOL
+	8	AM;		//	SCHOOL
+	9	AM;		//	EAT, SCHOOL
+	10	AM;		//	SCHOOL
+	11	AM;		//	SCHOOL
+	12	AM;		//	SCHOOL
+	1	PM;		//	EAT, MEDITATE
+	2	PM;		//	SCHOOL
+	3	PM;		//	SCHOOL
+	4	PM;		//	SCHOOL
+	5	PM;		//	SCHOOL
+	6	PM;		//	EAT
+	7	PM;		//	GUITAR
+	8	PM;		//	GUITAR
+	9	PM;		//	SHOULD GET IN BED
+	10	PM;		//	SLEEP
+}
+
+TUESDAY()
+{
+	5	AM;		//	WAKE, EAT, DRESS
+	6	AM;		//	CHILL
+	7	AM;		//	GYM
+	8	AM;		//	GYM
+	9	AM;		//	RITALIN
+	10	AM;		//	SCHOOL
+	11	AM;		//	SCHOOL
+	12	AM;		//	SCHOOL
+	1	PM;		//	EAT, MEDITATE
+	2	PM;		//	SCHOOL
+	3	PM;		//	SCHOOL
+	4	PM;		//	SCHOOL
+	5	PM;		//	SCHOOL
+	6	PM;		//	EAT
+	7	PM;		//	GUITAR
+	8	PM;		//	GUITAR
+	9	PM;		//	SHOULD GET IN BED
+	10	PM;		//	SLEEP
+}
+
+WEDNESDAY()
+{
+	5	AM;		//	WAKE, RITALIN, DRESS
+	6	AM;		//	SCHOOL
+	7	AM;		//	SCHOOL
+	8	AM;		//	SCHOOL
+	9	AM;		//	EAT, SCHOOL
+	10	AM;		//	SCHOOL
+	11	AM;		//	SCHOOL
+	12	AM;		//	SCHOOL
+	1	PM;		//	EAT, MEDITATE
+	2	PM;		//	SCHOOL
+	3	PM;		//	SCHOOL
+	4	PM;		//	SCHOOL
+	5	PM;		//	SCHOOL
+	6	PM;		//	EAT
+	7	PM;		//	GUITAR
+	8	PM;		//	GUITAR
+	9	PM;		//	SHOULD GET IN BED
+	10	PM;		//	SLEEP
+}
+
+THURSDAY()
+{
+	5	AM;		//	WAKE, EAT, DRESS
+	6	AM;		//	CHILL
+	7	AM;		//	GYM
+	8	AM;		//	GYM
+	9	AM;		//	RITALIN
+	10	AM;		//	SCHOOL
+	11	AM;		//	SCHOOL
+	12	AM;		//	SCHOOL
+	1	PM;		//	EAT, MEDITATE
+	2	PM;		//	SCHOOL
+	3	PM;		//	SCHOOL
+	4	PM;		//	SCHOOL
+	5	PM;		//	SCHOOL
+	6	PM;		//	EAT
+	7	PM;		//	GUITAR
+	8	PM;		//	GUITAR
+	9	PM;		//	SHOULD GET IN BED
+	10	PM;		//	SLEEP
+}
+
+FRIDAY()
+{
+	5	AM;		//	WAKE, RITALIN, DRESS
+	6	AM;		//	SCHOOL
+	7	AM;		//	SCHOOL
+	8	AM;		//	SCHOOL
+	9	AM;		//	EAT, SCHOOL
+	10	AM;		//	SCHOOL
+	11	AM;		//	SCHOOL
+	12	AM;		//	SCHOOL
+	1	PM;		//	EAT, MEDITATE
+	2	PM;		//	SCHOOL
+	3	PM;		//	SCHOOL
+	4	PM;		//	SCHOOL
+	5	PM;		//	SCHOOL
+	6	PM;		//	EAT
+	7	PM;		//	GUITAR
+	8	PM;		//	GUITAR
+	9	PM;		//	SHOULD GET IN BED
+	10	PM;		//	SLEEP
+}
+
+SATURDAY() DEPENDING ON MY LOCATION
+{
+	5	AM;		//	WAKE, RITALIN, DRESS
+	6	AM;		//	SCHOOL
+	7	AM;		//	SCHOOL
+	8	AM;		//	SCHOOL
+	9	AM;		//	EAT, SCHOOL
+	10	AM;		//	SCHOOL
+	11	AM;		//	CHILL
+	12	AM;		//	CHILL
+	1	PM;		//	EAT, MEDITATE
+	2	PM;		//	DO SOME RESEARCH
+	3	PM;		//	DO SOME RESEARCH
+	4	PM;		//	FREE TIME
+	5	PM;		//	FREE TIME
+	6	PM;		//	EAT
+	7	PM;		//	GUITAR
+	8	PM;		//	GUITAR
+	9	PM;		//	SHOULD GET IN BED
+	10	PM;		//	SLEEP
+}
